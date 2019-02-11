@@ -1,6 +1,11 @@
 class Api::V1::UsersController < ApplicationController
   before_action :find_user, only: [:edit, :show]
 
+  def index
+    @users = User.all
+    render json: @users, status: :ok
+  end
+
   def create
     @user = User.create(user_params)
     render json: @user, status: :ok

@@ -1,6 +1,11 @@
 class Api::V1::CollabsController < ApplicationController
   before_action :find_collab, only: [:update, :show]
 
+  def index
+    @collabs = Collab.all
+    render json: @collabs, status: :ok
+  end
+
   def create
     @collab = Collab.create(collab_params)
     render json: @collab, status: :ok
@@ -11,7 +16,12 @@ class Api::V1::CollabsController < ApplicationController
   end
 
   def update
-    @collab.
+    @collab.update(collab_params)
+    if @collab.save
+      render json: @notes, status: :ok
+    else
+      render json: { errors: @note.errors.full_messages }, status: :unprocessible_entity
+    end
   end
 
   private
