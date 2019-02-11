@@ -14,7 +14,7 @@ User.delete_all
 
 
 10.times do
-  Collab.create(name: Faker::Music.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4))
+  Collab.create(name: Faker::Music.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4), image: 'https://sites.psu.edu/siowfa16/files/2016/09/baby-seal-29vsgyf.jpg')
 end
 
 specialties = %w(drums guitar bass keyboard rapper singer beatboxer producer)

@@ -27,7 +27,7 @@ class Api::V1::CollabsController < ApplicationController
   private
 
   def collab_params
-    params.require(:collab).permit(:name, :drummers, :guitars, :basses, :keyboards, :rappers, :singers, :producers)
+    params.require(:collab).permit(:name, :drummers, :guitars, :basses, :keyboards, :rappers, :singers, :producers, :image)
   end
 
   def find_collab
