@@ -13,8 +13,22 @@ Collab.delete_all
 User.delete_all
 
 
+images = %w(https://www.topbestpics.com/wp-content/uploads/2017/06/cute-animals-15-380x250.jpg
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfQoa8vmNEktXWXy5NEKoUfeAZsbpesx0W7l9RHAfp0LBY3PE3
+https://sites.psu.edu/siowfa16/files/2016/09/baby-seal-29vsgyf.jpg
+https://static.boredpanda.com/blog/wp-content/uuuploads/cute-baby-animals/cute-baby-animals-32.jpg
+https://media.mnn.com/assets/images/2010/02/baby-orangutan.jpg.1000x0_q80_crop-smart.jpg
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIXJ9z1UC21KuyVIVqfYTss4HacQVh48Cd_mnn831aYsbv3n8Y
+https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0QR67wkQOztPNDV5jHqiivyBrAAlLPbmGOQhPdhgwCxMFdywg4Q
+https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/30/pembroke-welsh-corgi.jpg
+https://pbs.twimg.com/profile_images/941322358245154816/tF4dPHrS_400x400.jpg
+https://thenypost.files.wordpress.com/2018/05/180516-woman-mauled-by-angry-wiener-dogs-feature.jpg?quality=90&strip=all&w=618&h=410&crop=1)
+
+counter = 0
 10.times do
-  Collab.create(name: Faker::Music.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4), image: 'https://sites.psu.edu/siowfa16/files/2016/09/baby-seal-29vsgyf.jpg')
+  Collab.create(name: Faker::Music.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4), image: images[counter])
+
+  counter++
 end
 
 specialties = %w(drums guitar bass keyboard rapper singer beatboxer producer)
