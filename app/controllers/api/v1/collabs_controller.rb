@@ -8,6 +8,7 @@ class Api::V1::CollabsController < ApplicationController
 
   def create
     @collab = Collab.create(collab_params)
+    # byebug
     render json: @collab, status: :ok
   end
 
@@ -27,7 +28,7 @@ class Api::V1::CollabsController < ApplicationController
   private
 
   def collab_params
-    params.require(:collab).permit(:name, :drummers, :guitars, :basses, :keyboards, :rappers, :singers, :producers, :image)
+    params.require(:collab).permit(:name, :drummers, :guitars, :basses, :keyboards, :rappers, :singers, :producers, :image, :beatboxers, :updated_at)
   end
 
   def find_collab
