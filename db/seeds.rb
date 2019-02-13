@@ -28,7 +28,7 @@ counter = 0
 10.times do
   Collab.create(name: Faker::Music.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4), image: images[counter])
 
-  counter++
+  counter +=1
 end
 
 specialties = %w(drums guitar bass keyboard rapper singer beatboxer producer)
