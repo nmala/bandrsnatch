@@ -33,10 +33,12 @@ https://goo.gl/Gi6Rc1
 https://goo.gl/ejtfrJ
 https://goo.gl/yvscpv
 https://goo.gl/Qn7MqE
-https://goo.gl/m78xbz)
+https://goo.gl/m78xbz
+https://goo.gl/SJMNBZ
+https://goo.gl/eCS1kw)
 
 counter = 0
-10.times do  ``
+12.times do  ``
   Collab.create(name: Faker::Music.unique.band, drummers:rand(4), guitars:rand(4),basses:rand(4), keyboards:rand(4), rappers:rand(4),singers:rand(4), beatboxers: rand(4), producers: rand(4), image: images[counter])
 
   counter +=1
